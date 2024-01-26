@@ -27,7 +27,7 @@ Config.Fuel = "ps-fuel"
 -- Google Docs Link
 Config.sopLink = {
     ['police'] = '',
-    ['ambulance'] = '',
+    ['ambulance'] = 'https://docs.google.com/spreadsheets/d/1WlcFnD6ZPORC6PzfKEEJ9rChekKoCA2lEllzH46BShQ/edit#gid=588278445',
     ['bcso'] = '',
     ['doj'] = '',
     ['sast'] = '',
@@ -40,7 +40,7 @@ Config.sopLink = {
 -- Google Docs Link
 Config.RosterLink = {
     ['police'] = '',
-    ['ambulance'] = 'https://docs.google.com/spreadsheets/d/1WlcFnD6ZPORC6PzfKEEJ9rChekKoCA2lEllzH46BShQ/edit#gid=588278445',
+    ['ambulance'] = '',
     ['bcso'] = '',
     ['doj'] = '',
     ['sast'] = '',
