@@ -43,6 +43,7 @@ end)
 RegisterNetEvent("QBCore:Client:SetDuty", function(job, state)
     if AllowedJob(job) then
         TriggerServerEvent("ps-mdt:server:ToggleDuty")
+        TriggerEvent('wais:addmissionxp:duty', 1) --added by pamela for wais battlepass
 	TriggerServerEvent("ps-mdt:server:ClockSystem")
         TriggerServerEvent('QBCore:ToggleDuty')
         if PlayerData.job.name == "police" or PlayerData.job.type == "leo" then
@@ -427,6 +428,7 @@ RegisterNUICallback("sendToCommunityService", function(data, cb)
 
     if sentence > 0 then
         TriggerServerEvent("qb-communityservice:server:StartCommunityService", targetSourceId, sentence)
+        TriggerEvent('wais:addmissionxp:sendcomserv', 1) --added by pamela for wais battlepass
     end
 end)
 
@@ -613,6 +615,7 @@ RegisterNUICallback("newReport", function(data, cb)
     local time = data.time
 
     TriggerServerEvent('mdt:server:newReport', existing, id, title, reporttype, details, tags, gallery, officers, civilians, time)
+    TriggerEvent('wais:addmissionxp:creatreport', 1) --added by pamela for wais battlepass
     cb(true)
 end)
 
@@ -781,6 +784,7 @@ end)
 
 RegisterNUICallback("setCallsign", function(data, cb)
     TriggerServerEvent('mdt:server:setCallsign', data.cid, data.newcallsign)
+    TriggerEvent('wais:addmissionxp:setcallsign', 1) --added by pamela for wais battlepass
     cb(true)
 end)
 
